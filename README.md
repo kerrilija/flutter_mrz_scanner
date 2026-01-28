@@ -1,5 +1,17 @@
 # flutter_mrz_scanner
 
+## Android Dependencies (Fork Note)
+
+This fork fixes broken Android dependencies. The original package used JCenter (now dead) and broken JitPack URLs.
+
+**Fixed repositories:**
+- `fotoapparat` - now uses Appodeal artifactory
+- `tesseract4android` - now uses correct JitPack path
+
+**If remote URLs fail in the future:** Cached AAR files are available in `android/libs/`. See `android/libs/README.md` for instructions on using local dependencies.
+
+---
+
 Scan MRZ (Machine Readable Zone) from identity documents (passport, id, visa) using iOS and Android. Heavily insipred by [QKMRZScanner](https://github.com/Mattijah/QKMRZScanner).
 
 ## To plugin users
@@ -35,15 +47,6 @@ The plugin uses the device camera, so do not forget to provide the `NSCameraUsag
 
 ### For Android
 Camera permission will be automatically added to your `AndroidManifest.xml`. Do not forget to request this permission.
-
-#### Android Dependencies (Fork Note)
-This fork fixes broken Android dependencies. The original package used JCenter (now dead) and broken JitPack URLs.
-
-Fixed repositories:
-- `fotoapparat` - now uses Appodeal artifactory
-- `tesseract4android` - now uses correct JitPack path
-
-**If remote URLs fail in the future:** Cached AAR files are available in `android/libs/`. See `android/libs/README.md` for instructions on using local dependencies.
 
 ### Use the widget
 Use `MRZScanner` widget:
